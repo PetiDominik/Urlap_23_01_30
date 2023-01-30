@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #A75D5D;
+    color: #FFC3A1;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    vertical-align: center;
+    align-items: center;
+}
+
+form {
+    width: 600px;
+    margin: 0 auto;
+    display: grid;
+}
+form h1 {
+    text-align: center;
+}
+form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border: none;
+    background-color: #D3756B;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+form fieldset label {
+    display: block;
+    text-align: right;
+}
+form fieldset input[type=text] {
+    width: 70%;
+}
+form input {
+    padding: 6px;
+    background-color: #D3756B;
+    border: 2px solid #FFC3A1;
+    color: #FFC3A1;
+    border-radius: 10px;
+    transition: 0.5s all;
+}
+form input[type=text]::placeholder{
+    transition: 0.5s all;
+    color: #FFC3A1;
+    opacity: 0.5;
+}
+form input:hover, form fieldset input:focus {
+    background-color: #FFC3A1;
+    color: #D3756B;
+    outline: none;
+}
+form fieldset input[type=text]:hover::placeholder, form fieldset input[type=text]:focus::placeholder {
+    color: #D3756B;
+}
+
+form fieldset input[type=date] {
+    width: 100%;
+}
+
+form input[type=submit] {
+    width: 150px;
+    margin: 10px auto 0 auto;
+    padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+      width: 100%;
+    }
+    form fieldset {
+        grid-template-columns: 1fr;
+    }
+    form fieldset label {
+        text-align: left;
+    }
+  }
